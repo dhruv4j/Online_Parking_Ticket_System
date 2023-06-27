@@ -1,6 +1,4 @@
 body{
-    width: 100%;
-    height: 100%;
     background-image: url("bg-login.jpg");
     background-size: cover;
     background-position: center;
@@ -10,17 +8,8 @@ body{
     justify-content: center;
     align-items: center;
     letter-spacing: 1px;
-    
-
-
-
-    
 }
-
-
-
-form {
-   
+form {  
 background: rgba(255, 255, 255, 0.2);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(10, 10, 10, 0.1);
@@ -30,9 +19,9 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
     position: relative;
     width: 400px;
-    height: 470px;
+    height: 440px;
     max-width: 400px;
-    max-height: 470px;
+    max-height: 440px;
     
     
     border-radius: 50px 50px;
@@ -75,17 +64,9 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   }
   
  
-  .imagebox {
-    text-align: center;
-    
-    margin: 24px 0 12px 0;
-  }
-  
 
-  img.admin-logo {
-    width: 40%;
-    border-radius: 50%;
-  }
+
+
 
   .box {
     padding: 16px;
