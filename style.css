@@ -1,0 +1,625 @@
+
+:root{
+    --blue:#2273F8;
+}
+
+*{
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background:var(--blue);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.btn{
+    font-size: 2rem;
+    padding:.7rem 3.5rem;
+    border-radius: 5rem;
+    color:#fff;
+    background:var(--blue);
+    margin-top: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    cursor: pointer;
+    border:none;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+#messagebtn{
+    background: red;
+}
+#messagebtn:hover{
+    background: white;
+    color: black;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    height:100%;
+    width:0%;
+    background:red;
+    z-index: -1;
+    transition: .2s linear;
+}
+#navbarbtn {
+    background: red;
+    margin-left: 2rem;
+    text-align: center;
+    border: none;
+    font-size: 2rem;
+    border-radius: 12px;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-right:16px;
+    opacity:0.8;
+}
+#navbarbtn a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+#navbarbtn:hover{
+    opacity: 1;
+}
+
+.btn:hover::before{
+    left: 0;
+    width:100%;
+}
+
+.heading{
+    padding:.5rem 2rem;
+    font-size: 2rem;
+    background:rgba(0,0,0,.2);
+    color:red;
+    display: inline-block;
+    margin:1rem 0;
+}
+
+.title{
+    font-size: 4rem;
+    color:#333;
+    padding:0 1rem;
+    text-align: center;
+}
+
+header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:2rem 7%;
+    background:linear-gradient(160deg,rgba(12,12,12,0.6),rgba(12,12,12,0.6));
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color:#fff;
+}
+
+header .logo i{
+    padding:0 .5rem;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color:#fff;
+    position: relative;
+}
+
+header .navbar ul li a::before{
+    content: '';
+    position: absolute;
+    bottom:-.5rem; right:0;
+    width:0%;
+    height:.2rem;
+    background:#fff;
+    transition: .2s linear;
+}
+
+header .navbar ul li a.active::before,
+header .navbar ul li a:hover::before{
+    left:0;
+    width:100%;
+}
+
+header #menu{
+    font-size: 3rem;
+    color:#fff;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background:linear-gradient(160deg,rgba(12,12,12,0.7),rgba(12,12,12,0.7)),url('https://image.lexica.art/full_jpg/7dcb730f-3e58-4375-9cef-5c7aa64c6a3c') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    padding:1.5rem 7%;
+    padding-top: 4rem;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+.home .image{
+    flex:1 1 40rem;
+    padding-top: 6rem;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-3.4rem);
+    }
+    
+    100%{
+        transform: translateY(0);
+    }
+
+}
+
+.home .image img{
+    width:100%;
+}
+
+.home .content{
+    flex:1 1 40rem;
+    padding-top: 5rem;
+}
+
+.home .content h1{
+    font-size: 6rem;
+    color:#fff;
+}
+.home .content h2{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.home .content p{
+    font-size: 1.8rem;
+    color:#eee;
+    padding:.5rem 0;
+}
+
+.home .content .btn{
+    background:#fff;
+    color:#333;
+}
+
+.home .content .btn:hover{
+    color:#fff;
+}
+
+.about{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background:#333;
+    padding:2rem;
+    padding-top: 6rem;
+}
+
+.about{
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/6b091128240299.5601429e3ed61.jpg') no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    padding:1rem;
+    padding-top: 8rem;
+}
+.about .image{
+    flex:1 1 40rem;
+    text-align: center;
+    padding:4rem 0;
+    animation: floatImage2 4s ease-in-out infinite ;
+}
+@keyframes floatImage2{
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-4.4rem);
+    }
+    
+    100%{
+        transform: translateY(0);
+    }
+
+}
+
+
+.about .image img{
+    height:60vh;
+}
+
+.about .content{
+    flex:1 1 40rem;
+}
+
+.about .content h3{
+    font-size: 4rem;
+    color:#fff;
+}
+
+.about .content .heading{
+    background:rgba(0,0,0,.3);
+}
+
+.about .content p{
+    font-size: 1.5rem;
+    color:#eee;
+    padding:1rem 0;
+}
+
+.about .content ul li{
+    list-style: none;
+    font-size: 2rem;
+    color:#fff;
+    padding:.5rem 0;
+}
+
+.about .content ul li i{
+    color:var(--blue);
+}
+
+.features{
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 7rem;
+}
+
+.features .description{
+    padding:1rem 0;
+    margin:0 auto;
+    width:70rem;
+    color:#666;
+    font-size: 1.5rem;
+}
+
+.features .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .box-container .box{
+    margin:2rem;
+    width:28rem;
+    z-index: 0;
+    position: relative;
+    transition-property:all;
+	transition-duration:1s;
+}
+.box:hover{
+    transform: scale(1.1);
+}
+
+.features .box-container .box::before{
+    content: '';
+    position: absolute;
+    top:32.5%; left:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background:black;
+    height: 10rem;
+    width: 10rem;
+    z-index: -1;
+    box-shadow: 0 0 0 1rem rgba(255, 0, 0, 0.8);
+}
+
+.features .box-container .box i{
+    color:#fff;
+    font-size: 4.5rem;
+    margin:8rem 0;
+}
+
+.features .box-container .box h3{
+    color:#333;
+    font-size: 2rem;
+}
+
+.features .box-container .box p{
+    color:#666;
+    font-size: 1.2rem;
+    padding:1rem 0;
+}
+
+.booking{
+    min-height: 100vh;
+    text-align: center;
+    background:white;
+    padding:1rem;
+    padding-top: 8rem;
+}
+
+
+
+
+
+
+
+
+#feedbackform h1{
+    color:white;
+    font-size: 3rem;
+    margin-top:150px;
+
+}
+
+.contact{
+    min-height: 100vh;
+    text-align: center;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url('https://triplecrownleadership.com/assets/Depositphotos_21127391_original.jpg') no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    padding:1rem;
+    padding-top: 8rem;
+}
+
+.contact .heading{
+    background:rgba(0,0,0,.5);
+    color:red;
+}
+
+.contact .title{
+    color:#fff;
+}
+
+.contact form{
+    width:85%;
+    margin:1rem auto;
+}
+
+.contact form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input, .contact form textarea{
+    height:4rem;
+    width:49%;
+    padding:0 1rem;
+    margin:1rem 0;
+    font-size: 2rem;
+    border:.2rem solid #eee;
+    background:none;
+    text-transform: none;
+    color:#fff;
+}
+
+.contact form .inputBox input::placeholder, .contact form textarea::placeholder{
+    color:#ccc;
+}
+
+.contact form textarea{
+    height:20rem;
+    width:100%;
+    padding:1rem;
+    resize: none;
+}
+
+.contact form .btn:hover{
+    background:#fff;
+    color:#333;
+}
+
+.faq{
+    text-align: center;
+    padding:.5rem;
+    padding-top: 8rem;
+    min-height: 100vh;
+}
+
+.faq .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.faq .row .image{
+    flex:1 1 40rem;
+    padding:.5rem;
+}
+
+.faq .row .image img{
+    width:70%;
+}
+
+.faq .row .accordion-container{
+    flex:1 1 40rem;
+    padding:1rem;
+}
+
+.faq .row .accordion-container .accordion{
+    text-align: left;
+    padding:.5rem 0;
+}
+
+.faq .row .accordion-container .accordion .accordion-heading{
+    color:#fff;
+    background:black;
+    padding:1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.faq .row .accordion-container .accordion .accordion-content{
+    color:#333;
+    padding:1rem;
+    font-size: 1.3rem;
+    border:.2rem solid black;
+    display: none;
+}
+
+.faq .row .accordion-container .accordion:nth-child(1) .accordion-content{
+    display: block;
+}
+
+.footer{
+    background:white;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.footer .credit{
+    padding:2rem 1rem;
+    text-align: center;
+    background:#000000;
+    color:#eee;
+    font-size: 2rem;
+}
+
+.footer .credit a{
+    color:#fff;
+}
+
+#icon{
+    color:red;
+}
+#heading2{
+    color:rgba(255, 0, 0, 1);
+}
+#heading3{
+    color:red;
+}
+
+#bookingp{
+    font-size: 3.3rem;
+    padding-bottom: 10px;
+}
+
+#faqheading{
+    color:red;
+}
+
+
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header #menu{
+        display: block;
+    }
+    
+    header .navbar{
+        position: fixed;
+        top:-120%; left:0;
+        width:100%;
+        background:#fff;
+        opacity: 0;
+    }
+
+    header .navbar ul{
+        padding:2rem 0;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        color:#333;
+        display: block;
+        margin:1rem 0;
+    }
+
+    header .navbar ul li a::before{
+        background:#333;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle{
+        top:7.4rem;
+        opacity: 1;
+    }
+
+    .home .content{
+        text-align: center;
+    }
+
+    .features .description{
+        width:auto;
+        padding:1rem;
+    }
+
+    .contact form{
+        width:95%;
+    }
+
+}
+
+@media (max-width:500px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .home .content h1{
+        font-size: 3.5rem;
+    }
+
+    .about .image img{
+        width:80%;
+        height:auto;
+    }
+
+    .contact form .inputBox input{
+        width:100%; 
+    }
+
+}

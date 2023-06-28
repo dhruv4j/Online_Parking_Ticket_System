@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiPark.com</title>
+    <link rel="icon"
+        href="https://th.bing.com/th/id/R.33188087cf6a123799680dc0a24c4fc9?rik=cz%2bF95ucYeqNTQ&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_536537.png&ehk=43CeBbfojJycVA0MymUZI0u9RSV82dlWaMbv667C3nY%3d&risl=&pid=ImgRaw&r=0"
+        type="image/png/gif">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+
+        <a href="#" class="logo"><i class="fas fa-car"></i>DigiPark</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" href="#home">home</a></li>
+                <li><a href="#features">About</a></li>
+                <li><a href="#about">Features</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Feedback</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <button id="navbarbtn"><a href="admin.html">Login</a></button>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h1><span class="multiple-text"></span></h1>
+            <h2>Experience Effortless Parking with DigiPark!</h2>
+            <p>Say No! to Paper Tickets, Streamline Your Parking Woes With Your Virtual Ticket to Hassle-Free Parking!
+            </p>
+            <a href="#booking"><button class="btn">Book Slot</button></a>
+        </div>
+
+        <div class="image">
+            <img src="https://purepng.com/public/uploads/large/purepng.com-ford-mustang-red-carcarcarsvehiclevehiclestransport-5615211266939gqkz.png"
+                alt="">
+        </div>
+
+    </section>
+
+    <section class="features" id="features">
+
+        <h1 id="heading2" class="heading">About Us</h1>
+
+        <h1 class="title">Why Choose Us?</h1>
+
+        <p class="description">We are DigiPark, your one-stop destination for seamless online parking booking.
+            ensuring hassel-free and stress-free parking experience every time.</p>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-newspaper"></i>
+                <h3>Paperless</h3>
+                <p>Our digital platform enables you manage parking transactions
+                    electronically, Embracing a greener future with paperless solution.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa fa-lock"></i>
+                <h3>Secure</h3>
+                <p>With our encryption protocols and google's security, we providing a safe and
+                    secure environment for transactions.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa fa-handshake"></i>
+                <h3>User Support</h3>
+                <p>We value our users, we auth to provide user the best experience while using our facilities and
+                    services.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>24 x 7 service</h3>
+                <p> Our dedicated team is here to assist you anytime, ensuring prompt resolution
+                    With our reliable and accessible support day or night .</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <div class="image">
+            <img src="Untitled-2.png" alt="">
+        </div>
+
+        <div class="content">
+            <h1 class="heading">About Features</h1>
+            <h3>Effortless parking with DigiPark!</h3>
+            <p>Discover the epitome of convenience with DigiPark's effortless parking solution. Seamlessly navigate the
+                process of locating, reserving, and securely paying for parking spaces through our user-friendly
+                platform, providing you with a refined and hassle-free parking experience.</p>
+            <ul>
+                <li> <i id="icon" class="fas fa-check-double"></i> Online Facility </li>
+                <li> <i id="icon" class="fas fa-check-double"></i> Mobile Friendly Webapp </li>
+                <li> <i id="icon" class="fas fa-check-double"></i> User Support </li>
+                <li> <i id="icon" class="fas fa-check-double"></i> Environment Friendly </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="booking" id="booking">
+
+        <h1 id="heading3" class="heading">Booking</h1>
+
+        <h1 id="bookingp" class="title">Booking made hassel-free</h1>
+
+        <div class="box-container">
+
+     
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading">FeedBack</h1>
+
+        <h1 class="title">Your FeedBack Matters Us</h1>
+
+        <form onsubmit="displaymessage()" id="feedbackform">
+
+            <div class="inputBox">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Surname" required>
+            </div>
+
+            <div class="inputBox">
+                <input type="email" placeholder="Email" required>
+                <input type="number" placeholder="Contact Number" required>
+            </div>
+
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Experience With Us..." required></textarea>
+
+            <input type="submit" value="message" class="btn" id="messagebtn">
+
+        </form>
+
+    </section>
+
+    <section class="faq" id="faq">
+
+        <h1 id="faqheading" class="heading">FAQ</h1>
+
+        <h1 class="title">We're Always There For Your Help</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="FAQ.png" alt="">
+            </div>
+
+            <div class="accordion-container">
+
+                <div class="accordion">
+                    <h1 class="accordion-heading">
+                        How do I book a parking spot online with DigiPark?
+                    </h1>
+                    <p class="accordion-content">
+                        Booking a parking spot with DigiPark is simple! Just visit our website, enter your
+                        location, date, time and other details and browse available parking options. Select your desired
+                        spot, make
+                        the payment, and receive a confirmation for your booking.
+                    </p>
+                </div>
+
+                <div class="accordion">
+                    <h1 class="accordion-heading">
+                        How do I pay for my parking reservation?
+                    </h1>
+                    <p class="accordion-content">
+                        DigiPark offers 2 payment options, mobile wallets like paytm, googlePay
+                        secure online payment methods along with cash payment. Simply choose your preferred payment
+                        method during the booking
+                        process and complete the transaction securely.
+                    </p>
+                </div>
+
+                <div class="accordion">
+                    <h1 class="accordion-heading">
+                        Is my personal and payment information secure with DigiPark?
+                    </h1>
+                    <p class="accordion-content">
+                        Absolutely. DigiPark prioritizes the security and privacy of your data. We employ
+                        industry-standard encryption protocols and adhere to strict security measures to protect your
+                        personal and payment information. Your data is handled with the utmost care and confidentiality.
+                    </p>
+                </div>
+
+                <div class="accordion">
+                    <h1 class="accordion-heading">
+                        What if I encounter issues or have questions about my parking reservation?
+                    </h1>
+                    <p class="accordion-content">
+                        We've got you covered! DigiPark provides 24/7 customer support to address any queries or
+                        concerns you may have. Our dedicated team is available via phone or email, to assist
+                        you with prompt and reliable service.
+                    </p>
+                </div>
+
+                <div class="accordion">
+                    <h1 class="accordion-heading">
+                        How can I find parking availability in real-time with DigiPark?
+                    </h1>
+                    <p class="accordion-content">
+                        DigiPark provides real-time parking availability information for a seamless parking experience.
+                        Simply access our website or mobile app, enter your desired location, and select your preferred
+                        date and time. The system will display available parking options with live updates, allowing you
+                        to make an informed decision based on real-time availability.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer">
+
+        <h1 class="credit"> &copy; Copyright <a href="#">DigiPark</a> | all rights reserved. </h1>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
