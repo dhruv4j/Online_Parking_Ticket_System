@@ -280,6 +280,7 @@ header #menu{
 
 .about .content{
     flex:1 1 40rem;
+    margin:12px;
 }
 
 .about .content h3{
@@ -376,6 +377,83 @@ header #menu{
     background:white;
     padding:1rem;
     padding-top: 8rem;
+}
+
+.arrangement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+}
+.bookingimg{
+    background: url('https://image.lexica.art/full_jpg/b7505c87-fc35-4534-a702-d1a808342506');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    border-radius:12px;
+    width:400px;
+}
+.bookingform{
+    width:350px;
+}
+.bookingform div{
+    margin-top:15px;
+}
+.bookingform input{
+    font-size: 2rem;
+   padding:8px;
+}
+.bookingform img{
+    width:42px;
+    margin-top:30px;
+}
+.hrarrange{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hrarrange hr{
+    width:15%;
+    margin-top:4px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height:0;
+}
+#uh1{
+    font-size: 30px;
+}
+#uniqueh1{
+    font-size: 1.6rem;
+    color:red;
+}
+.submitbtn{
+    font-size: 2rem;
+    padding:10px;
+    cursor: pointer;
+    border:none;
+    color:white;
+    background: black;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition-duration: 0.3s;
+}
+.submitbtn a{
+    text-decoration: none;
+    color:white;
+}
+.submitbtn:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.booking .box-container{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    box-shadow: 2px 3px 4px rgb(180, 180, 180),
+                -1px 1px 4px rgb(180, 180, 180);
+    border-radius:12px;
+    margin:10px;
+    height:500px;
 }
 
 
@@ -614,7 +692,7 @@ header #menu{
     }
 
     .about .image img{
-        width:80%;
+        width: 90%;
         height:auto;
     }
 
@@ -622,4 +700,17 @@ header #menu{
         width:100%; 
     }
 
+    #feedbackform h1{
+        margin-top:100px;
+        margin-bottom:100px;
+    }
+
+}
+@media (max-width:773px){
+    .bookingimg{
+        display: none;
+    }
+    .bookingform{
+        width:320px;
+    }
 }

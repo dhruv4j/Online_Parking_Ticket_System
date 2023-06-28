@@ -45,7 +45,9 @@ const typed = new Typed('.multiple-text', {
 });
 
 function displaymessage(){
+    event.preventDefault();
     document.getElementById('feedbackform').innerHTML="<h1>Thank you for your feedback!</h1>";
+    alert('Message has been sent.')
     setTimeout(() => {
         document.getElementById('feedbackform').innerHTML=`<div class="inputBox">
         <input type="text" placeholder="Name" required>
@@ -60,5 +62,15 @@ function displaymessage(){
         <textarea name="" id="" cols="30" rows="10" placeholder="Your Experience With Us..." required></textarea>
 
         <input type="submit" value="message" class="btn" id="messagebtn">`;
-    }, 3000);
+    }, 5000);
+}
+
+function slotform(){
+    event.preventDefault();
+    alert('Validation successfull click again to continue.');
+    document.getElementById('suprise').outerHTML=`<input type="button" id="suprise" onclick="newpage()" class="submitbtn" value="Book Slot">`;
+    console.log(document.getElementById('suprise'));
+}
+function newpage(){
+    window.location="admin.html";
 }
