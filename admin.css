@@ -6,9 +6,10 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background-image: url(bg-register.jpg);
+    background: url('https://th.bing.com/th/id/R.e924f9231069884c3c39584d9fcd5279?rik=ZWpu4Hg0ZvbLuA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fRed-black-wallpaper-new-collection.jpg&ehk=ow5UMkit7K%2frdRvvYzRM5qkncx9eAGsrFa910sQLFWw%3d&risl=&pid=ImgRaw&r=0');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: top center;
     background-attachment: fixed;
     overflow: hidden;
 }
@@ -16,8 +17,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 110vh;
-    background: rgba(39, 39, 39, 0.4);
+    min-height: 100vh;
+    /* background: rgba(39, 39, 39, 0.4); */
 }
 .nav{
     position: fixed;
@@ -35,8 +36,9 @@ body{
     color: rgb(251, 247, 243);
     font-size: 25px;
     font-weight: 900;
-    
+    cursor: pointer;
 }
+
 .nav-menu ul{
     display: flex;
 }
