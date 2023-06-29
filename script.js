@@ -69,7 +69,7 @@ function slotform(){
     event.preventDefault();
     alert('Validation successfull click again to continue.');
     document.getElementById('suprise').outerHTML=`<input type="button" id="suprise" onclick="newpage()" class="submitbtn" value="Book Slot">`;
-    console.log(document.getElementById('suprise'));
+    console.log(document.getElementById('suprise')); 
 }
 function newpage(){
     window.location="admin.html";

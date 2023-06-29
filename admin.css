@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url('https://th.bing.com/th/id/R.e924f9231069884c3c39584d9fcd5279?rik=ZWpu4Hg0ZvbLuA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fRed-black-wallpaper-new-collection.jpg&ehk=ow5UMkit7K%2frdRvvYzRM5qkncx9eAGsrFa910sQLFWw%3d&risl=&pid=ImgRaw&r=0');
+    background: url('./images/adminbg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -18,7 +18,6 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: rgba(39, 39, 39, 0.4); */
 }
 .nav{
     position: fixed;
