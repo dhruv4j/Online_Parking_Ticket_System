@@ -391,8 +391,9 @@ header #menu{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left center;
-    border-radius:12px;
-    width:400px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    width:380px;
 }
 .bookingform{
     width:350px;
@@ -449,8 +450,8 @@ header #menu{
 .booking .box-container{
     display: grid;
     grid-template-columns: repeat(2,auto);
-    box-shadow: 2px 3px 4px rgb(180, 180, 180),
-                -1px 1px 4px rgb(180, 180, 180);
+    box-shadow: 2px 3px 34px rgb(180, 180, 180),
+                -1px 1px 34px rgb(180, 180, 180);
     border-radius:12px;
     margin:10px;
     height:500px;
