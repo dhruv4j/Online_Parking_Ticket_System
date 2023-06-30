@@ -83,3 +83,19 @@ function myMenuFunction() {
         i.className = "nav-menu";
     }
 }
+
+function verifylogin(){
+   let username = document.getElementById('adminname').value;
+   let password = document.getElementById('adminpass').value;
+
+   if(username=="admin" && password=="admin"){
+        window.location="index.html";
+        alert("Login Successfull.");
+        
+   }
+   else{
+    alert("Invalid username or password.");
+    document.getElementById('adminname').value="";
+    document.getElementById('adminpass').value="";
+   }
+}

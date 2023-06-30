@@ -38,20 +38,20 @@
         <div class="form-box">
 
             <div class="login-container" id="login">
-                <form>
+                <form >
                     <div class="top">
                         <header>Admin Login</header>
                     </div>
                     <div class="input-box">
-                        <input type="text" class="input-field" placeholder="Username" required>
+                        <input type="text" class="input-field" placeholder="Username" id="adminname" required>
                         <i class="bx bx-user"></i>
                     </div>
                     <div class="input-box">
-                        <input type="password" class="input-field" placeholder="Password" required>
+                        <input type="password" class="input-field" placeholder="Password" id="adminpass" required>
                         <i class="bx bx-lock-alt"></i>
                     </div>
                     <div class="input-box">
-                        <input type="submit" class="submit" value="Login">
+                        <input type="button" class="submit" onclick="verifylogin()" value="Login">
                     </div>
                 </form>
                 <div class="two-col">
