@@ -72,8 +72,24 @@ function slotform(){
     console.log(document.getElementById('suprise')); 
 }
 function newpage(){
-    window.location="admin.html";
+    let fname = document.getElementById('n1').value;
+    let mname = document.getElementById('n2').value;
+    let lname = document.getElementById('n3').value;
+    let fullname = fname+" "+mname+" "+lname;
+    
+    localStorage.setItem("FULLNAME",fullname);
+
+    const existlocal = JSON.parse(localStorage.getItem("test")) || []  ;
+    if(existlocal.length){
+        localStorage.setItem("test",JSON.stringify([...existlocal,{fullname:fullname}]))
+    }
+    else{
+        localStorage.setItem("test",JSON.stringify([{fullname:fullname}]))
+    }
+    window.location="slotbooking.html";
 }
+
+
 function myMenuFunction() {
     var i = document.getElementById("navMenu");
 
@@ -98,4 +114,8 @@ function verifylogin(){
     document.getElementById('adminname').value="";
     document.getElementById('adminpass').value="";
    }
+}
+
+function mainpage(){
+    window.location="index.html";
 }

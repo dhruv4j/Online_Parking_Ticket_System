@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://th.bing.com/th/id/R.33188087cf6a123799680dc0a24c4fc9?rik=cz%2bF95ucYeqNTQ&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_536537.png&ehk=43CeBbfojJycVA0MymUZI0u9RSV82dlWaMbv667C3nY%3d&risl=&pid=ImgRaw&r=0"
+        type="image/png/gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>DigiPark | Slot Booking</title>
+    <link rel="stylesheet" href="slotbooking.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="innercontainer">
+            <div class="subcontainer">
+
+                <div class="headofform">
+                    <p id="phead"><i class="fas fa-car"></i> DigiPark</p>
+                    <div class="headlinks">
+
+                        <p id="p1" onclick="displaynow1()">Current-Booking</p>
+                        <p id="p2" onclick="displaynow2()">Pre-Booking</p>
+                        <hr id="hr1">
+                        <hr id="hr2">
+
+
+
+
+                    </div>
+                </div>
+
+                <form>
+                    <div class="twoparts">
+                        <div class="lightgrey1">
+                            <h2>Booking Information</h2>
+                            <div class="fp1">
+                                <div>
+                                    <p>Date</p>
+                                    <input type="text" id="fp11" class="smallwidth settingpadding" readonly>
+                                </div>
+                                <div>
+                                    <p>Name</p>
+                                    <input id="fp12" type="text" class="settingpadding" readonly>
+                                </div>
+                            </div>
+                            <div class="fp2">
+                                <div>
+                                    <p>Parking Location</p>
+                                    <select id="fp21" onchange="placedes(),totalprice()" class="fullwidth settingpadding" required>
+                                        <option value="ACOE">Atharva College Of Engineering</option>
+                                        <option value="Mall1">Infiniti Mall</option>
+                                        <option value="Mall2">Inorbit Mall</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="fp3">
+                                <div>
+                                    <p>Type</p>
+                                    <select id="fp31" class="settingpadding mediumwidth" onchange="totalprice()" required>
+                                        <option value="Two Wheeler">Bike/Scooty</option>
+                                        <option value="Car">Car</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>Vehicle Number</p>
+                                    <input id="fp32" required type="text" class="mediumwidth settingpadding"
+                                        onblur="uppercaseit()" placeholder="Enter Number Plate">
+                                </div>
+                            </div>
+                            <div class="fp4">
+                                <div class="div1">
+                                    <p>Arrival</p>
+                                    <select id="fp41" required class="mediumwidth settingpadding">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>Depart</p>
+                                    <select id="fp42" onchange="totalprice()" required class="mediumwidth settingpadding">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="fp5">
+                                <div class="hopes">
+                                    <img src="./images/indian flag.png" id="hopesimg" alt="error loading image">
+                                    <h6 id="hopesh6">+91</h6>
+                                    <p>Contact Number</p>
+                                    <input type="number" class="settingpadding" placeholder="Contact Number" id="f51"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lightgrey2">
+                            <h2>Parking Status</h2>
+                            <div class="fp6">
+                                <div class="fp6div1">
+                                    <h4>Available</h4>
+                                    <h1 id="fp61">0</h1>
+                                </div>
+                                <div class="fp6div2">
+                                    <h4>Capacity</h4>
+                                    <h1 id="fp62">20</h1>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Parking Cost Per Hour</p>
+                                <input type="text" class="fullwidth settingpadding" id="fp71" placeholder="0" readonly>
+                            </div>
+                            <div>
+                                <p>Total Amount</p>
+                                <input type="text" class="fullwidth settingpadding" id="fp81" placeholder="0" readonly>
+                            </div>
+                            <div class="checking">
+                                <input type="checkbox" id="fp91" required>
+                                <p>I have read all <a href="#">Terms and Conditions</a>.</p>
+                            </div>
+                            <div>
+                                <input type="submit" class="fullwidth submitbtn" value="Confirm my slot">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div>
+        <img src="./images/Untitled design (17).gif" class="tryingit" alt="error">
+    </div>
+    <div>
+        <img src="./images/Untitled design (17).gif" class="tryingit2" alt="error">
+    </div>
+    <div>
+        <img src="./images/yessss.gif" class="tryingit3" alt="error">
+    </div>
+</body>
+
+
+<script src="slotbooking.js"></script>
+
+</html>
