@@ -1,9 +1,3 @@
-sbook();
-function sbook() {
-    const test1 = JSON.parse(localStorage.getItem("test"))
-    console.log(test1);
-    console.log(localStorage.getItem("FULLNAME"));
-}
 
 let clientname = localStorage.getItem("FULLNAME");
 
@@ -43,7 +37,8 @@ let hour = date.getHours();
 document.getElementById('fp71').value = "5 Rs";
 document.getElementById('fp81').value = "5 Rs";
 if (hour <= 10) {
-    document.getElementById('fp41').innerHTML = `<option value="11">11:00 AM</option>
+    document.getElementById('fp41').innerHTML = `<option value="None">-Select-</option>
+    <option value="11">11:00 AM</option>
     <option value="12">12:00 PM</option>
     <option value="13">1:00 PM</option>
     <option value="14">2:00 PM</option>
@@ -52,6 +47,7 @@ if (hour <= 10) {
     <option value="17">5:00 PM</option>
                                            `;
     document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
             <option value="12">12:00 PM</option>
             <option value="13">1:00 PM</option>
             <option value="14">2:00 PM</option>
@@ -62,14 +58,17 @@ if (hour <= 10) {
                                                    `;
 }
 else if (hour == 11) {
-    document.getElementById('fp41').innerHTML = `<option value="12">12:00 PM</option>
+    document.getElementById('fp41').innerHTML = `
+                                                    <option value="None">-Select-</option>
+                                                    <option value="12">12:00 PM</option>
                                                      <option value="13">1:00 PM</option>
                                                      <option value="14">2:00 PM</option>
                                                      <option value="15">3:00 PM</option>
                                                      <option value="16">4:00 PM</option>
                                                      <option value="17">5:00 PM</option>
                                                                                             `;
-    document.getElementById('fp42').innerHTML = `<option value="13">1:00 PM</option>
+    document.getElementById('fp42').innerHTML = `<option value="None">-Select-</option>
+                                                            <option value="13">1:00 PM</option>
                                                              <option value="14">2:00 PM</option>
                                                              <option value="15">3:00 PM</option>
                                                              <option value="16">4:00 PM</option>
@@ -79,6 +78,7 @@ else if (hour == 11) {
 }
 else if (hour == 12) {
     document.getElementById('fp41').innerHTML = `
+                                                    <option value="None">-Select-</option>
                                                      <option value="13">1:00 PM</option>
                                                      <option value="14">2:00 PM</option>
                                                      <option value="15">3:00 PM</option>
@@ -86,6 +86,7 @@ else if (hour == 12) {
                                                      <option value="17">5:00 PM</option>
                                                                                             `;
     document.getElementById('fp42').innerHTML = `
+                                                            <option value="None">-Select-</option>
                                                              <option value="14">2:00 PM</option>
                                                              <option value="15">3:00 PM</option>
                                                              <option value="16">4:00 PM</option>
@@ -95,13 +96,14 @@ else if (hour == 12) {
 }
 else if (hour == 13) {
     document.getElementById('fp41').innerHTML = `
-                                    
+                                                    <option value="None">-Select-</option>
                                                      <option value="14">2:00 PM</option>
                                                      <option value="15">3:00 PM</option>
                                                      <option value="16">4:00 PM</option>
                                                      <option value="17">5:00 PM</option>
                                                                                             `;
     document.getElementById('fp42').innerHTML = `
+                                                            <option value="None">-Select-</option>
                                                             <option value="15">3:00 PM</option>
                                                              <option value="16">4:00 PM</option>
                                                              <option value="17">5:00 PM</option>
@@ -110,11 +112,13 @@ else if (hour == 13) {
 }
 else if (hour == 14) {
     document.getElementById('fp41').innerHTML = `
+                                                    <option value="None">-Select-</option>
                                                      <option value="15">3:00 PM</option>
                                                      <option value="16">4:00 PM</option>
                                                      <option value="17">5:00 PM</option>
                                                                                             `;
     document.getElementById('fp42').innerHTML = `
+                                                            <option value="None">-Select-</option>
                                                              <option value="16">4:00 PM</option>
                                                              <option value="17">5:00 PM</option>
                                                              <option value="18">6:00 PM</option>
@@ -122,19 +126,23 @@ else if (hour == 14) {
 }
 else if (hour == 15) {
     document.getElementById('fp41').innerHTML = `
+                                                    <option value="None">-Select-</option>
                                                      <option value="16">4:00 PM</option>
                                                      <option value="17">5:00 PM</option>
                                                                                             `;
     document.getElementById('fp42').innerHTML = `
+                                                            <option value="None">-Select-</option>
                                                              <option value="17">5:00 PM</option>
                                                              <option value="18">6:00 PM</option>
                                                                                                     `;
 }
 else if (hour == 16) {
     document.getElementById('fp41').innerHTML = `
+                                                    <option value="None">-Select-</option>
                                                      <option value="17">5:00 PM</option>
                                                                                             `;
     document.getElementById('fp42').innerHTML = `
+                                                            <option value="None">-Select-</option>
                                                              <option value="18">6:00 PM</option>
                                                                                                     `;
 }
@@ -154,10 +162,12 @@ function placedes() {
     let time = new Date();
     let hour = time.getHours();
     let place = document.getElementById('fp21').value;
+    document.getElementById('fp61').innerHTML=0;
     if (place == "Mall1") {
         document.getElementById('fp62').innerHTML = 100;
         if (hour <= 10) {
-            document.getElementById('fp41').innerHTML = `<option value="11">11:00 AM</option>
+            document.getElementById('fp41').innerHTML = `<option value="None">-Select-</option>
+                                                            <option value="11">11:00 AM</option>
                                                             <option value="12">12:00 PM</option>
                                                              <option value="13">1:00 PM</option>
                                                              <option value="14">2:00 PM</option>
@@ -171,7 +181,7 @@ function placedes() {
                                                              <option value="22">10:00 PM</option>
                                                              <option value="23">11:00 PM</option>
                                                                                                     `;
-            document.getElementById('fp42').innerHTML = `
+            document.getElementById('fp42').innerHTML = `<option value="None">-Select-</option>
                                                                     <option value="12">12:00 PM</option>
                                                                     <option value="13">1:00 PM</option>
                                                                      <option value="14">2:00 PM</option>
@@ -189,6 +199,7 @@ function placedes() {
         }
         else if (hour == 11) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="12">12:00 PM</option>
                  <option value="13">1:00 PM</option>
                  <option value="14">2:00 PM</option>
@@ -203,6 +214,7 @@ function placedes() {
                  <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="13">1:00 PM</option>
                  <option value="14">2:00 PM</option>
                  <option value="15">3:00 PM</option>
@@ -219,6 +231,7 @@ function placedes() {
         }
         else if (hour == 13) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="14">2:00 PM</option>
                 <option value="15">3:00 PM</option>
                 <option value="16">4:00 PM</option>
@@ -231,6 +244,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="15">3:00 PM</option>
                 <option value="16">4:00 PM</option>
                 <option value="17">5:00 PM</option>
@@ -245,6 +259,7 @@ function placedes() {
         }
         else if (hour == 14) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="15">3:00 PM</option>
                 <option value="16">4:00 PM</option>
                 <option value="17">5:00 PM</option>
@@ -256,6 +271,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="16">4:00 PM</option>
                 <option value="17">5:00 PM</option>
                 <option value="18">6:00 PM</option>
@@ -269,6 +285,7 @@ function placedes() {
         }
         else if (hour == 15) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                  <option value="16">4:00 PM</option>
                  <option value="17">5:00 PM</option>
                  <option value="18">6:00 PM</option>
@@ -279,6 +296,7 @@ function placedes() {
                  <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="17">5:00 PM</option>
                 <option value="18">6:00 PM</option>
                 <option value="19">7:00 PM</option>
@@ -291,6 +309,7 @@ function placedes() {
         }
         else if (hour == 16) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="17">5:00 PM</option>
                 <option value="18">6:00 PM</option>
                 <option value="19">7:00 PM</option>
@@ -300,6 +319,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="18">6:00 PM</option>
                 <option value="19">7:00 PM</option>
                 <option value="20">8:00 PM</option>
@@ -311,6 +331,7 @@ function placedes() {
         }
         else if (hour == 17) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="18">6:00 PM</option>
                 <option value="19">7:00 PM</option>
                 <option value="20">8:00 PM</option>
@@ -319,6 +340,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="19">7:00 PM</option>
                 <option value="20">8:00 PM</option>
                 <option value="21">9:00 PM</option>
@@ -329,6 +351,7 @@ function placedes() {
         }
         else if (hour == 18) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="19">7:00 PM</option>
                 <option value="20">8:00 PM</option>
                 <option value="21">9:00 PM</option>
@@ -336,6 +359,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="20">8:00 PM</option>
                 <option value="21">9:00 PM</option>
                 <option value="22">10:00 PM</option>
@@ -345,12 +369,14 @@ function placedes() {
         }
         else if (hour == 19) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="20">8:00 PM</option>
                 <option value="21">9:00 PM</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="21">9:00 PM</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
@@ -359,11 +385,13 @@ function placedes() {
         }
         else if (hour == 20) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="21">9:00 PM</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
                 <option value="24">12:00 AM</option>
@@ -371,19 +399,23 @@ function placedes() {
         }
         else if (hour == 21) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="23">11:00 PM</option>
                 <option value="24">12:00 AM</option>
                                                                                                             `;
         }
         else if (hour == 22) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="24">12:00 AM</option>
                                                                                                             `;
         }
@@ -403,7 +435,8 @@ function placedes() {
     else if (place == "Mall2") {
         document.getElementById('fp62').innerHTML = 150;
         if (hour <= 10) {
-            document.getElementById('fp41').innerHTML = `<option value="11">11:00 AM</option>
+            document.getElementById('fp41').innerHTML = `<option value="None">-Select-</option>
+                                                            <option value="11">11:00 AM</option>
                                                             <option value="12">12:00 PM</option>
                                                              <option value="13">1:00 PM</option>
                                                              <option value="14">2:00 PM</option>
@@ -417,7 +450,7 @@ function placedes() {
                                                              <option value="22">10:00 PM</option>
                                                              <option value="23">11:00 PM</option>
                                                                                                     `;
-            document.getElementById('fp42').innerHTML = `
+            document.getElementById('fp42').innerHTML = `   <option value="None">-Select-</option>
                                                                     <option value="12">12:00 PM</option>
                                                                     <option value="13">1:00 PM</option>
                                                                      <option value="14">2:00 PM</option>
@@ -435,6 +468,7 @@ function placedes() {
         }
         else if (hour == 11) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="12">12:00 PM</option>
                  <option value="13">1:00 PM</option>
                  <option value="14">2:00 PM</option>
@@ -449,6 +483,7 @@ function placedes() {
                  <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="13">1:00 PM</option>
                  <option value="14">2:00 PM</option>
                  <option value="15">3:00 PM</option>
@@ -465,6 +500,7 @@ function placedes() {
         }
         else if (hour == 13) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="14">2:00 PM</option>
                 <option value="15">3:00 PM</option>
                 <option value="16">4:00 PM</option>
@@ -477,6 +513,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="15">3:00 PM</option>
                 <option value="16">4:00 PM</option>
                 <option value="17">5:00 PM</option>
@@ -491,6 +528,7 @@ function placedes() {
         }
         else if (hour == 14) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="15">3:00 PM</option>
                 <option value="16">4:00 PM</option>
                 <option value="17">5:00 PM</option>
@@ -502,6 +540,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="16">4:00 PM</option>
                 <option value="17">5:00 PM</option>
                 <option value="18">6:00 PM</option>
@@ -515,6 +554,7 @@ function placedes() {
         }
         else if (hour == 15) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                  <option value="16">4:00 PM</option>
                  <option value="17">5:00 PM</option>
                  <option value="18">6:00 PM</option>
@@ -525,6 +565,7 @@ function placedes() {
                  <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="17">5:00 PM</option>
                 <option value="18">6:00 PM</option>
                 <option value="19">7:00 PM</option>
@@ -537,6 +578,7 @@ function placedes() {
         }
         else if (hour == 16) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="17">5:00 PM</option>
                 <option value="18">6:00 PM</option>
                 <option value="19">7:00 PM</option>
@@ -546,6 +588,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="18">6:00 PM</option>
                 <option value="19">7:00 PM</option>
                 <option value="20">8:00 PM</option>
@@ -557,6 +600,7 @@ function placedes() {
         }
         else if (hour == 17) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="18">6:00 PM</option>
                 <option value="19">7:00 PM</option>
                 <option value="20">8:00 PM</option>
@@ -565,6 +609,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="19">7:00 PM</option>
                 <option value="20">8:00 PM</option>
                 <option value="21">9:00 PM</option>
@@ -575,6 +620,7 @@ function placedes() {
         }
         else if (hour == 18) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="19">7:00 PM</option>
                 <option value="20">8:00 PM</option>
                 <option value="21">9:00 PM</option>
@@ -582,6 +628,7 @@ function placedes() {
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="20">8:00 PM</option>
                 <option value="21">9:00 PM</option>
                 <option value="22">10:00 PM</option>
@@ -591,12 +638,14 @@ function placedes() {
         }
         else if (hour == 19) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="20">8:00 PM</option>
                 <option value="21">9:00 PM</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="21">9:00 PM</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
@@ -605,11 +654,13 @@ function placedes() {
         }
         else if (hour == 20) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="21">9:00 PM</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
                 <option value="24">12:00 AM</option>
@@ -617,19 +668,23 @@ function placedes() {
         }
         else if (hour == 21) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="22">10:00 PM</option>
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="23">11:00 PM</option>
                 <option value="24">12:00 AM</option>
                                                                                                             `;
         }
         else if (hour == 22) {
             document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="23">11:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                 <option value="24">12:00 AM</option>
                                                                                                             `;
         }
@@ -649,7 +704,9 @@ function placedes() {
     else {
         document.getElementById('fp62').innerHTML = 20;
         if (hour <= 10) {
-            document.getElementById('fp41').innerHTML = `<option value="11">11:00 AM</option>
+            document.getElementById('fp41').innerHTML = `
+            <option value="None">-Select-</option>
+            <option value="11">11:00 AM</option>
             <option value="12">12:00 PM</option>
             <option value="13">1:00 PM</option>
             <option value="14">2:00 PM</option>
@@ -658,6 +715,7 @@ function placedes() {
             <option value="17">5:00 PM</option>
                                                    `;
             document.getElementById('fp42').innerHTML = `
+            <option value="None">-Select-</option>
                     <option value="12">12:00 PM</option>
                     <option value="13">1:00 PM</option>
                     <option value="14">2:00 PM</option>
@@ -668,14 +726,18 @@ function placedes() {
                                                            `;
         }
         else if (hour == 11) {
-            document.getElementById('fp41').innerHTML = `<option value="12">12:00 PM</option>
+            document.getElementById('fp41').innerHTML = `
+                                                        <option value="None">-Select-</option>
+                                                            <option value="12">12:00 PM</option>
                                                              <option value="13">1:00 PM</option>
                                                              <option value="14">2:00 PM</option>
                                                              <option value="15">3:00 PM</option>
                                                              <option value="16">4:00 PM</option>
                                                              <option value="17">5:00 PM</option>
                                                                                                     `;
-            document.getElementById('fp42').innerHTML = `<option value="13">1:00 PM</option>
+            document.getElementById('fp42').innerHTML = `
+                                                                <option value="None">-Select-</option>
+                                                                    <option value="13">1:00 PM</option>
                                                                      <option value="14">2:00 PM</option>
                                                                      <option value="15">3:00 PM</option>
                                                                      <option value="16">4:00 PM</option>
@@ -685,6 +747,7 @@ function placedes() {
         }
         else if (hour == 12) {
             document.getElementById('fp41').innerHTML = `
+                                                            <option value="None">-Select-</option>
                                                              <option value="13">1:00 PM</option>
                                                              <option value="14">2:00 PM</option>
                                                              <option value="15">3:00 PM</option>
@@ -692,6 +755,7 @@ function placedes() {
                                                              <option value="17">5:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+                                                                <option value="None">-Select-</option>
                                                                      <option value="14">2:00 PM</option>
                                                                      <option value="15">3:00 PM</option>
                                                                      <option value="16">4:00 PM</option>
@@ -701,13 +765,14 @@ function placedes() {
         }
         else if (hour == 13) {
             document.getElementById('fp41').innerHTML = `
-                                            
+                                                            <option value="None">-Select-</option>
                                                              <option value="14">2:00 PM</option>
                                                              <option value="15">3:00 PM</option>
                                                              <option value="16">4:00 PM</option>
                                                              <option value="17">5:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+                                                                <option value="None">-Select-</option>
                                                                     <option value="15">3:00 PM</option>
                                                                      <option value="16">4:00 PM</option>
                                                                      <option value="17">5:00 PM</option>
@@ -716,11 +781,13 @@ function placedes() {
         }
         else if (hour == 14) {
             document.getElementById('fp41').innerHTML = `
+                                                            <option value="None">-Select-</option>
                                                              <option value="15">3:00 PM</option>
                                                              <option value="16">4:00 PM</option>
                                                              <option value="17">5:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+                                                                <option value="None">-Select-</option>
                                                                      <option value="16">4:00 PM</option>
                                                                      <option value="17">5:00 PM</option>
                                                                      <option value="18">6:00 PM</option>
@@ -728,19 +795,23 @@ function placedes() {
         }
         else if (hour == 15) {
             document.getElementById('fp41').innerHTML = `
+                                                            <option value="None">-Select-</option>
                                                              <option value="16">4:00 PM</option>
                                                              <option value="17">5:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+                                                                <option value="None">-Select-</option>
                                                                      <option value="17">5:00 PM</option>
                                                                      <option value="18">6:00 PM</option>
                                                                                                             `;
         }
         else if (hour == 16) {
             document.getElementById('fp41').innerHTML = `
+                                                        <option value="None">-Select-</option>
                                                              <option value="17">5:00 PM</option>
                                                                                                     `;
             document.getElementById('fp42').innerHTML = `
+                                                                <option value="None">-Select-</option>
                                                                      <option value="18">6:00 PM</option>
                                                                                                             `;
         }
@@ -818,7 +889,7 @@ function totalprice() {
         }
     }
 
-    else{
+    else {
         if (document.getElementById('fp31').value == "Two Wheeler") {
             document.getElementById('fp71').value = "15 Rs";
             let money = 15;
@@ -847,4 +918,133 @@ function totalprice() {
         }
     }
 
+}
+
+function confirmslot() {
+    event.preventDefault();
+    let confirmdate = document.getElementById('fp11').value;
+    let confirmname = document.getElementById('fp12').value;
+    let confirmplace = document.getElementById('fp21').value;
+    let confirmvtype = document.getElementById('fp31').value;
+    let confirmnumberplate = document.getElementById('fp32').value;
+    let confirmarrival = document.getElementById('fp41').value;
+    let confirmdepart = document.getElementById('fp42').value;
+    let confirmnumber = document.getElementById('fp51').value;
+    console.log(confirmnumber);
+    let confirmtotalamount = document.getElementById('fp81').value;
+    if (confirmarrival == "None" || confirmdepart == "None" || confirmdepart - confirmarrival <= 0) {
+        alert('Please select appropriate timings.');
+    }
+    else {
+        const existlocal = JSON.parse(localStorage.getItem("test1")) || [];
+        if (existlocal.length) {
+            localStorage.setItem("test1", JSON.stringify([...existlocal, {
+                customername: confirmname, date: confirmdate,
+                date: confirmdate, place: confirmplace, type: confirmvtype, plate: confirmnumberplate,
+                arrival: confirmarrival, depart: confirmdepart, amount: confirmtotalamount, contact: confirmnumber
+            }]))
+        }
+        else {
+            localStorage.setItem("test1", JSON.stringify([{
+                customername: confirmname, date: confirmdate,
+                date: confirmdate, place: confirmplace, type: confirmvtype, plate: confirmnumberplate,
+                arrival: confirmarrival, depart: confirmdepart, amount: confirmtotalamount, contact: confirmnumber
+            }]))
+        }
+        document.getElementById('finalconfirm').outerHTML=`<input type="reset" id="greybtn" class="fullwidth submitbtn" value="Confirming...">`
+        setTimeout(() => {
+        window.location="payment.html";
+        }, 2000);
+    }
+    
+    
+}
+
+function spaceavailable() {
+    const existlocal = JSON.parse(localStorage.getItem("test1")) || [];
+    let arrivaltime = document.getElementById('fp41').value;
+    let departtime = document.getElementById('fp42').value;
+    let cplace = document.getElementById('fp21').value;
+    let count = 0;
+    if (cplace == "Mall1") {
+        if(existlocal.length==0){
+            document.getElementById('fp61').innerHTML = 100;
+        }
+        for (let i = 0; i < existlocal.length; i++) {
+            
+            if (existlocal[i].place == "Mall1") {
+                if (arrivaltime < existlocal[i].arrival && departtime < existlocal[i].arrival) {
+                    document.getElementById('fp61').innerHTML = 100;
+                }
+                else if (arrivaltime > existlocal[i].arrival && departtime > existlocal[i].arrival) {
+                    document.getElementById('fp61').innerHTML = 100;
+                }
+                else {
+                    count++;
+                }
+            }
+            else{
+                document.getElementById('fp61').innerHTML = 100;
+            }
+        }
+        if (count > 0) {
+            document.getElementById('fp61').innerHTML = 100 - count;
+        }
+    }
+
+    else if (cplace == "Mall2") {
+        if(existlocal.length==0){
+            document.getElementById('fp61').innerHTML = 150;
+        }
+        for (let i = 0; i < existlocal.length; i++) {
+            if (existlocal[i].place == "Mall2") {
+                console.log("I'm inside Mall2");
+                if (arrivaltime < existlocal[i].arrival && departtime < existlocal[i].arrival) {
+                    document.getElementById('fp61').innerHTML = 150;
+                }
+                else if (arrivaltime > existlocal[i].arrival && departtime > existlocal[i].arrival) {
+                    document.getElementById('fp61').innerHTML = 150;
+                }
+                else {
+                    count++;
+                }
+            }
+            else{
+                document.getElementById('fp61').innerHTML = 150;
+            }
+        }
+        if (count > 0) {
+            document.getElementById('fp61').innerHTML = 150 - count;
+        }
+    }
+
+    else{
+        if(existlocal.length==0){
+            document.getElementById('fp61').innerHTML = 20;
+        }
+        for (let i = 0; i < existlocal.length; i++) {
+            if (existlocal[i].place == "ACOE") {
+                if (arrivaltime < existlocal[i].arrival && departtime < existlocal[i].arrival) {
+                    document.getElementById('fp61').innerHTML = 20;
+                }
+                else if (arrivaltime > existlocal[i].arrival && departtime > existlocal[i].arrival) {
+                    document.getElementById('fp61').innerHTML = 20;
+                }
+                else {
+                    count++;
+                }
+            }
+            else{
+                document.getElementById('fp61').innerHTML = 20;
+            }
+        }
+        if (count > 0) {
+            document.getElementById('fp61').innerHTML = 20 - count;
+        }
+    }
+
+}
+
+function comingsoon(){
+    alert("This feature under development and will be released soon.");
 }

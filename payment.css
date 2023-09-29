@@ -1,0 +1,89 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:98vh;
+}
+#ruppees{
+    font-size: 30px;
+    margin-bottom: 3px;
+    font-weight:bold;
+    color: rgb(2, 173, 2);
+}
+#headsec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+#div2{
+    position: relative;
+}
+#img1{
+    z-index: -2;
+    user-select: none;
+    width: 250px;
+    box-shadow: 2px 2px 10px rgb(171, 171, 171);
+}
+#img2{
+    z-index: -2;
+    user-select: none;
+    position:absolute;
+    left:-230px;
+    top:20px;
+    width:200px;
+}
+#img3{
+    z-index: -2;
+    user-select: none;
+    position:absolute;
+    right:-230px;
+    top:10px;
+    width:200px;
+}
+#headsec div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#proceedbtn{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top:15px;
+    margin-bottom: 20px;
+    background-color: red;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:8px;
+    cursor: pointer;
+    box-shadow: 1px 2px 5px 0px rgb(198, 198, 198);
+}
+#proceedbtn2{
+    font-weight: 600;
+    font-size: 16px;
+    margin-top:15px;
+    margin-bottom: 20px;
+    background-color: red;
+    color:rgb(230, 229, 229);
+    border:none;
+    cursor:not-allowed;
+    padding:10px;
+    border-radius:8px;
+    box-shadow: 1px 2px 5px 0px rgb(198, 198, 198);
+}
+#filebtn{
+    margin-left:50px;
+}
+
+@media (max-width:698px){
+    #img2,#img3{
+        display: none;
+    }
+}

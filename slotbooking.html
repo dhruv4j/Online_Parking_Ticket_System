@@ -22,7 +22,8 @@
                     <div class="headlinks">
 
                         <p id="p1" onclick="displaynow1()">Current-Booking</p>
-                        <p id="p2" onclick="displaynow2()">Pre-Booking</p>
+                        <p id="p2" onclick="displaynow2(), comingsoon()">Pre-Booking</p>
+                        <p id="sp3">Soon!</p>
                         <hr id="hr1">
                         <hr id="hr2">
 
@@ -32,7 +33,7 @@
                     </div>
                 </div>
 
-                <form>
+                <form onsubmit="confirmslot()">
                     <div class="twoparts">
                         <div class="lightgrey1">
                             <h2>Booking Information</h2>
@@ -73,13 +74,13 @@
                             <div class="fp4">
                                 <div class="div1">
                                     <p>Arrival</p>
-                                    <select id="fp41" required class="mediumwidth settingpadding">
+                                    <select id="fp41" onchange="totalprice(),spaceavailable()" required class="mediumwidth settingpadding">
                                         <option value=""></option>
                                     </select>
                                 </div>
                                 <div>
                                     <p>Depart</p>
-                                    <select id="fp42" onchange="totalprice()" required class="mediumwidth settingpadding">
+                                    <select id="fp42" onchange="totalprice(),spaceavailable()" required class="mediumwidth settingpadding">
                                         <option value=""></option>
                                     </select>
                                 </div>
@@ -89,8 +90,7 @@
                                     <img src="./images/indian flag.png" id="hopesimg" alt="error loading image">
                                     <h6 id="hopesh6">+91</h6>
                                     <p>Contact Number</p>
-                                    <input type="number" class="settingpadding" placeholder="Contact Number" id="f51"
-                                        required>
+                                    <input type="number" id="fp51" class="settingpadding" placeholder="Contact Number" required>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                                 <p>I have read all <a href="#">Terms and Conditions</a>.</p>
                             </div>
                             <div>
-                                <input type="submit" class="fullwidth submitbtn" value="Confirm my slot">
+                                <input type="submit" id="finalconfirm" class="fullwidth submitbtn" value="Confirm my slot">
                             </div>
                         </div>
                     </div>

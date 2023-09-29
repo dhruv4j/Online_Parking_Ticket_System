@@ -78,14 +78,6 @@ function newpage(){
     let fullname = fname+" "+mname+" "+lname;
     
     localStorage.setItem("FULLNAME",fullname);
-
-    const existlocal = JSON.parse(localStorage.getItem("test")) || []  ;
-    if(existlocal.length){
-        localStorage.setItem("test",JSON.stringify([...existlocal,{fullname:fullname}]))
-    }
-    else{
-        localStorage.setItem("test",JSON.stringify([{fullname:fullname}]))
-    }
     window.location="slotbooking.html";
 }
 
@@ -105,7 +97,7 @@ function verifylogin(){
    let password = document.getElementById('adminpass').value;
 
    if(username=="admin" && password=="admin"){
-        window.location="index.html";
+        window.location="bookings.html";
         alert("Login Successfull.");
         
    }

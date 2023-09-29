@@ -141,11 +141,23 @@ body{
     margin-left:0;
     margin-right:68px;
 }
+#sp3{
+    position:absolute;
+    background-color: red;
+    color:white;
+    font-weight: 600;
+    padding:3px;
+    font-size: 9px;
+    border-radius:5px;
+    left:206px;
+    bottom:30px;
+    margin-bottom:10px;
+}
 .fp2, .fp5{
     margin-bottom:12px;
     overflow: hidden;
 }
-#f51{
+#fp51{
     width: 83%;
     padding-left:45px;
 }
@@ -173,7 +185,7 @@ body{
     width: 400px;
     height: 400px;
     left:0;
-    z-index: -3;
+    z-index: -4;
     user-select: none;
     rotate: 180deg;
 }
@@ -283,6 +295,11 @@ body{
 .submitbtn:active{
     background-color: rgb(211, 0, 0);
 }
+#greybtn{
+    color:rgb(187, 187, 187);
+    user-select: none;
+    cursor:not-allowed;
+}
 @media(max-width:450px){
     .container{
         width:350px;
@@ -290,6 +307,10 @@ body{
     }
     #p1,#p2{
         font-size: 14px;
+    }
+    #sp3{
+        left:158px;
+        bottom:22px;
     }
     #hr1{
         width:95px;
@@ -326,6 +347,13 @@ body{
 @media(max-width:1496px){
     .tryingit3{
         display: none;
+    }
+    
+}
+@media(max-width:400px){
+    .tryingit,.tryingit2{
+        
+        width:120px;
     }
     
 }
