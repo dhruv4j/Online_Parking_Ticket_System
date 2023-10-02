@@ -162,7 +162,7 @@ function placedes() {
     let time = new Date();
     let hour = time.getHours();
     let place = document.getElementById('fp21').value;
-    document.getElementById('fp61').innerHTML=0;
+    document.getElementById('fp61').innerHTML = 0;
     if (place == "Mall1") {
         document.getElementById('fp62').innerHTML = 100;
         if (hour <= 10) {
@@ -951,13 +951,13 @@ function confirmslot() {
                 arrival: confirmarrival, depart: confirmdepart, amount: confirmtotalamount, contact: confirmnumber
             }]))
         }
-        document.getElementById('finalconfirm').outerHTML=`<input type="reset" id="greybtn" class="fullwidth submitbtn" value="Confirming...">`
+        document.getElementById('finalconfirm').outerHTML = `<input type="reset" id="greybtn" class="fullwidth submitbtn" value="Confirming...">`
         setTimeout(() => {
-        window.location="payment.html";
+            window.location = "payment.html";
         }, 2000);
     }
-    
-    
+
+
 }
 
 function spaceavailable() {
@@ -965,26 +965,35 @@ function spaceavailable() {
     let arrivaltime = document.getElementById('fp41').value;
     let departtime = document.getElementById('fp42').value;
     let cplace = document.getElementById('fp21').value;
-    let count = 0;
+    var count = 0;
     if (cplace == "Mall1") {
-        if(existlocal.length==0){
+        if (existlocal.length == 0) {
             document.getElementById('fp61').innerHTML = 100;
         }
         for (let i = 0; i < existlocal.length; i++) {
-            
             if (existlocal[i].place == "Mall1") {
-                if (arrivaltime < existlocal[i].arrival && departtime < existlocal[i].arrival) {
+                if (arrivaltime == "None" || departtime == "None") {
                     document.getElementById('fp61').innerHTML = 100;
                 }
-                else if (arrivaltime > existlocal[i].arrival && departtime > existlocal[i].arrival) {
-                    document.getElementById('fp61').innerHTML = 100;
+                else if (arrivaltime < existlocal[i].arrival && departtime < existlocal[i].arrival) {
+                    if(departtime > existlocal[i].arrival){
+                        count++;
+                    }
+                    else{
+                        document.getElementById('fp61').innerHTML = 100;
+                    }
+                }
+                else if (arrivaltime > existlocal[i].arrival && departtime > existlocal[i].depart) {
+                    if(arrivaltime < existlocal[i].depart){
+                        count++;
+                    }
+                    else{
+                        document.getElementById('fp61').innerHTML = 100;
+                    }
                 }
                 else {
                     count++;
                 }
-            }
-            else{
-                document.getElementById('fp61').innerHTML = 100;
             }
         }
         if (count > 0) {
@@ -993,24 +1002,33 @@ function spaceavailable() {
     }
 
     else if (cplace == "Mall2") {
-        if(existlocal.length==0){
+        if (existlocal.length == 0) {
             document.getElementById('fp61').innerHTML = 150;
         }
         for (let i = 0; i < existlocal.length; i++) {
             if (existlocal[i].place == "Mall2") {
-                console.log("I'm inside Mall2");
-                if (arrivaltime < existlocal[i].arrival && departtime < existlocal[i].arrival) {
+                if (arrivaltime == "None" || departtime == "None") {
                     document.getElementById('fp61').innerHTML = 150;
                 }
-                else if (arrivaltime > existlocal[i].arrival && departtime > existlocal[i].arrival) {
-                    document.getElementById('fp61').innerHTML = 150;
+                else if (arrivaltime < existlocal[i].arrival && departtime < existlocal[i].arrival) {
+                    if(departtime > existlocal[i].arrival){
+                        count++;
+                    }
+                    else{
+                        document.getElementById('fp61').innerHTML = 150;
+                    }
+                }
+                else if (arrivaltime > existlocal[i].arrival && departtime > existlocal[i].depart) {
+                    if(arrivaltime < existlocal[i].depart){
+                        count++;
+                    }
+                    else{
+                        document.getElementById('fp61').innerHTML = 150;
+                    }
                 }
                 else {
                     count++;
                 }
-            }
-            else{
-                document.getElementById('fp61').innerHTML = 150;
             }
         }
         if (count > 0) {
@@ -1018,33 +1036,43 @@ function spaceavailable() {
         }
     }
 
-    else{
-        if(existlocal.length==0){
+    else {
+        if (existlocal.length == 0) {
             document.getElementById('fp61').innerHTML = 20;
         }
         for (let i = 0; i < existlocal.length; i++) {
             if (existlocal[i].place == "ACOE") {
-                if (arrivaltime < existlocal[i].arrival && departtime < existlocal[i].arrival) {
+                if (arrivaltime == "None" || departtime == "None") {
                     document.getElementById('fp61').innerHTML = 20;
                 }
-                else if (arrivaltime > existlocal[i].arrival && departtime > existlocal[i].arrival) {
-                    document.getElementById('fp61').innerHTML = 20;
+                else if (arrivaltime < existlocal[i].arrival && departtime < existlocal[i].arrival) {
+                    if(departtime > existlocal[i].arrival){
+                        count++;
+                    }
+                    else{
+                        document.getElementById('fp61').innerHTML = 20;
+                    }
+                }
+                else if (arrivaltime > existlocal[i].arrival && departtime > existlocal[i].depart) {
+                    if(arrivaltime < existlocal[i].depart){
+                        count++;
+                    }
+                    else{
+                        document.getElementById('fp61').innerHTML = 20;
+                    }
                 }
                 else {
                     count++;
                 }
-            }
-            else{
-                document.getElementById('fp61').innerHTML = 20;
             }
         }
         if (count > 0) {
             document.getElementById('fp61').innerHTML = 20 - count;
         }
     }
-
 }
 
-function comingsoon(){
+
+function comingsoon() {
     alert("This feature under development and will be released soon.");
 }
