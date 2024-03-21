@@ -75,18 +75,18 @@ div h1{
 div h2{
     font-size: 35px;
 }
-#myInput{
+#myInput,#myInput2{
     font-size:16px;
     margin-top:30px;
     padding:5px;
    width:1216px;
    cursor:text;
 }
-#tableclass{
+#tableclass,#tableclass2{
     padding:0;
     margin-top:20px;
 }
-#tableclass table{
+#tableclass table,#tableclass2 table{
     border:2px solid black;
     width:1228px;
     text-align: center;
@@ -94,7 +94,7 @@ div h2{
     margin:0;
     background-color: black;
 }
-#tableclass th{
+#tableclass th,#tableclass2 th{
     background-color: white;
     border:1px solid black;
     margin:0;
@@ -102,7 +102,7 @@ div h2{
     background-color: red;
     color:white;
 }
-#tableclass td{
+#tableclass td,#tableclass2 td{
     background-color: white;
     border:1px solid black;
     margin-left:0;

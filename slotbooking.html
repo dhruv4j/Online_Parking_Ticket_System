@@ -21,9 +21,8 @@
                     <p id="phead"><i class="fas fa-car"></i> DigiPark</p>
                     <div class="headlinks">
 
-                        <p id="p1" onclick="displaynow1()">Current-Booking</p>
+                        <p id="p1" onclick="displaynow1(), resettimings(),placedes()">Current-Booking</p>
                         <p id="p2" onclick="displaynow2(), comingsoon()">Pre-Booking</p>
-                        <p id="sp3">Soon!</p>
                         <hr id="hr1">
                         <hr id="hr2">
 
@@ -40,7 +39,7 @@
                             <div class="fp1">
                                 <div>
                                     <p>Date</p>
-                                    <input type="text" id="fp11" class="smallwidth settingpadding" readonly>
+                                    <input type="text" id="fp11" style="background-color:rgb(201, 201, 201); cursor:not-allowed;" class="smallwidth settingpadding" readonly>
                                 </div>
                                 <div>
                                     <p>Name</p>
@@ -50,7 +49,7 @@
                             <div class="fp2">
                                 <div>
                                     <p>Parking Location</p>
-                                    <select id="fp21" onchange="placedes(),totalprice()" class="fullwidth settingpadding" required>
+                                    <select id="fp21" onchange="placedes(),totalprice(),changept()" class="fullwidth settingpadding" required>
                                         <option value="ACOE">Atharva College Of Engineering</option>
                                         <option value="Mall1">Infiniti Mall</option>
                                         <option value="Mall2">Inorbit Mall</option>
@@ -142,5 +141,6 @@
 
 
 <script src="slotbooking.js"></script>
+<script src="slotprebooking.js"></script>
 
 </html>

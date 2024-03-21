@@ -127,7 +127,7 @@ body{
     justify-content: space-between;
     margin-bottom: 22px;
 }
-.fp1 div input{
+#fp12{
     cursor:not-allowed;
     user-select:text;
 }
@@ -140,18 +140,6 @@ body{
 .div1{
     margin-left:0;
     margin-right:68px;
-}
-#sp3{
-    position:absolute;
-    background-color: red;
-    color:white;
-    font-weight: 600;
-    padding:3px;
-    font-size: 9px;
-    border-radius:5px;
-    left:206px;
-    bottom:30px;
-    margin-bottom:10px;
 }
 .fp2, .fp5{
     margin-bottom:12px;
@@ -219,7 +207,7 @@ body{
     font-size: 13px;
     padding:3px;
 }
-#fp11, #fp12{
+#fp12{
     background-color:rgb(201, 201, 201);
 }
 
@@ -300,6 +288,9 @@ body{
     user-select: none;
     cursor:not-allowed;
 }
+.makeitwhite{
+    background-color: white;
+}
 @media(max-width:450px){
     .container{
         width:350px;
@@ -307,10 +298,6 @@ body{
     }
     #p1,#p2{
         font-size: 14px;
-    }
-    #sp3{
-        left:158px;
-        bottom:22px;
     }
     #hr1{
         width:95px;
