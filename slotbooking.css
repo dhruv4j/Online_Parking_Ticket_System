@@ -9,7 +9,7 @@ body{
    display: flex;
    align-items: center;
    justify-content: center;
-    width:100%;
+    width:100vw;
     height: 100%;
     
 }
@@ -340,7 +340,12 @@ body{
 @media(max-width:400px){
     .tryingit,.tryingit2{
         
-        width:120px;
+        display: none;
+    }
+    .fp6{
+       
+        grid-template-columns: repeat(1,auto);
+        
     }
     
 }
