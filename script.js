@@ -74,7 +74,7 @@ function slotform(){
     }, 1200);
     setTimeout(() => {
         document.getElementById('suprise').outerHTML=` <input type="submit" id="suprise" class="submitbtn" value="Book Slot">`;
-    }, 1300);
+    }, 1500);
     
 }
 function newpage(){
