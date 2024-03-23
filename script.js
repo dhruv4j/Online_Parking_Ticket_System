@@ -71,8 +71,10 @@ function slotform(){
     document.getElementById('suprise').outerHTML=`<input type="submit" id="suprise" style="color:rgb(105, 105, 105);opacity: 0.7; cursor: not-allowed; transform: scale(1.1)" class="submitbtn" value="Booking.." readonly>`
     setTimeout(() => {
         window.location="slotbooking.html";
-        document.getElementById('suprise').outerHTML=` <input type="submit" id="suprise" class="submitbtn" value="Book Slot">`
     }, 1200);
+    setTimeout(() => {
+        document.getElementById('suprise').outerHTML=` <input type="submit" id="suprise" class="submitbtn" value="Book Slot">`;
+    }, 1300);
     
 }
 function newpage(){
