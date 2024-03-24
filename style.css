@@ -622,6 +622,37 @@ header #menu{
     color:red;
 }
 
+.placemaps{
+    background:linear-gradient(160deg,rgba(12,12,12,0.7),rgba(12,12,12,0.7)),url('./images/maps.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.mapstitle{
+    font-size: 4rem;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+}
+.mapsdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.mapsdiv div{
+    margin: 10px;
+}
+iframe{
+    width: 480px;
+    height: 440px;
+}
 
 @media (max-width:768px){
 
@@ -713,5 +744,17 @@ header #menu{
     }
     .bookingform{
         width:320px;
+    }
+}
+@media (max-width:1500px){
+    iframe{
+        width: 380px;
+        height: 340px;
+    }
+}
+@media (max-width:500px){
+    iframe{
+        width: 280px;
+        height: 240px;
     }
 }
