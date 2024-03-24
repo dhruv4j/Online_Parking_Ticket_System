@@ -99,13 +99,13 @@ function myMenuFunction() {
 }
 
 function verifylogin(){
+    event.preventDefault();
    let username = document.getElementById('adminname').value;
    let password = document.getElementById('adminpass').value;
 
    if(username=="admin" && password=="admin"){
         window.location="bookings.html";
         alert("Login Successfull.");
-        
    }
    else{
     alert("Invalid username or password.");
