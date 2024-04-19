@@ -67,9 +67,15 @@ function displaymessage(){
 
 function slotform(){
     event.preventDefault();
-    alert('Validation successfull click again to continue.');
-    document.getElementById('suprise').outerHTML=`<input type="button" id="suprise" onclick="newpage()" class="submitbtn" value="Book Slot">`;
-    console.log(document.getElementById('suprise')); 
+    newpage();
+    document.getElementById('suprise').outerHTML=`<input type="submit" id="suprise" style="color:rgb(105, 105, 105);opacity: 0.7; cursor: not-allowed; transform: scale(1.1)" class="submitbtn" value="Booking.." readonly>`
+    setTimeout(() => {
+        window.location="slotbooking.html";
+    }, 1200);
+    setTimeout(() => {
+        document.getElementById('suprise').outerHTML=` <input type="submit" id="suprise" class="submitbtn" value="Book Slot">`;
+    }, 1500);
+    
 }
 function newpage(){
     let fname = document.getElementById('n1').value;
@@ -78,7 +84,7 @@ function newpage(){
     let fullname = fname+" "+mname+" "+lname;
     
     localStorage.setItem("FULLNAME",fullname);
-    window.location="slotbooking.html";
+    
 }
 
 
@@ -93,13 +99,13 @@ function myMenuFunction() {
 }
 
 function verifylogin(){
+    event.preventDefault();
    let username = document.getElementById('adminname').value;
    let password = document.getElementById('adminpass').value;
 
    if(username=="admin" && password=="admin"){
         window.location="bookings.html";
         alert("Login Successfull.");
-        
    }
    else{
     alert("Invalid username or password.");
@@ -109,5 +115,9 @@ function verifylogin(){
 }
 
 function mainpage(){
+    window.location="index.html";
+}
+function hackerbhai(){
+    alert("Pehle fursat mai nikal");
     window.location="index.html";
 }

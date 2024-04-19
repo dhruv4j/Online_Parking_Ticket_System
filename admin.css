@@ -190,6 +190,10 @@ header{
 .two label a:hover{
     text-decoration: underline;
 }
+#forgotpass:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
 @media only screen and (max-width: 786px){
     .nav-button{
         display: none;

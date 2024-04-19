@@ -28,6 +28,7 @@
                     <li><a href="index.html#booking" class="link">Booking</a></li>
                     <li><a href="index.html#contact" class="link">Feedback</a></li>
                     <li><a href="index.html#faq" class="link">FAQ</a></li>
+                    <li><a href="index.html#maps" class="link">Maps</a></li>
 
                 </ul>
             </div>
@@ -38,7 +39,7 @@
         <div class="form-box">
 
             <div class="login-container" id="login">
-                <form >
+                <form onsubmit="verifylogin()">
                     <div class="top">
                         <header>Admin Login</header>
                     </div>
@@ -51,7 +52,7 @@
                         <i class="bx bx-lock-alt"></i>
                     </div>
                     <div class="input-box">
-                        <input type="button" class="submit" onclick="verifylogin()" value="Login">
+                        <input type="submit" class="submit" value="Login">
                     </div>
                 </form>
                 <div class="two-col">
@@ -60,7 +61,7 @@
                         <label for="login-check"> Remember Me</label>
                     </div>
                     <div class="two">
-                        <label><a href="#">Forgot password?</a></label>
+                        <p id="forgotpass" onclick="hackerbhai()">Forgot password?</p>
                     </div>
                 </div>
             </div>
